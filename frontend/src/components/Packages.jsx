@@ -3,11 +3,10 @@ import templeImg from "../assets/temple.png";
 import beachImg from "../assets/beach.png";
 
 function Packages() {
-  const tabs = ["Highlight", "Itinerary", "Available Dates", "Costing"];
   const [activeTab, setActiveTab] = useState("Highlight");
 
   return (
-    <section className="bg-white py-16">
+    <section className="relative bg-white py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT CONTENT */}
@@ -47,7 +46,7 @@ function Packages() {
           </div>
 
           {/* TAB CONTENT */}
-          <div className="bg-white rounded-3xl p-8 text-gray-800 min-h-[200px] shadow-md">
+          <div className="bg-sky-500/10 rounded-3xl p-8 text-gray-800 min-h-[200px] shadow-md">
             {activeTab === "Highlight" && (
               <div className="grid grid-cols-2 gap-6">
                 <ul className="space-y-3 font-medium">
@@ -105,8 +104,21 @@ function Packages() {
           </div>
         </div>
 
-        {/* RIGHT IMAGES */}
-        <div className="relative flex gap-6 justify-center transform translate-x-10">
+        {/* RIGHT IMAGES, dots */}
+        <div className="relative isolate flex gap-6 justify-center translate-x-10">
+
+          {/* Decorative dots behind images (RIGHT SIDE) */}
+  <div className="absolute -right-16 top-1/2 -translate-y-1/2 z-0 pointer-events-none">
+    <div className="grid grid-cols-10 gap-5 opacity-40">
+      {Array.from({ length: 340 }).map((_, i) => (
+        <span
+          key={i}
+          className="w-1.5 h-1.5 bg-sky-400 rounded-full"
+        />
+      ))}
+    </div>
+  </div>
+        <div className="relative z-10 flex gap-6">
           <img
             src={templeImg}
             alt="Temple"
@@ -119,18 +131,6 @@ function Packages() {
             className="w-64 h-[420px] object-cover rounded-[120px] mt-16"
           />
         </div>
-
-        {/* RIGHT SIDE Dots */}
-        <div className="hidden md:flex flex-col gap-4 absolute right-0 top-1/2 -translate-y-1/2 pr-50">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`w-4 h-4 rounded-full transition
-                ${activeTab === tab ? "bg-sky-500" : "bg-gray-300"}`}
-              title={tab}
-            />
-          ))}
         </div>
       </div>
     </section>

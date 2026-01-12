@@ -7,20 +7,20 @@ function Navbar() {
     <nav className="w-full bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-blue-600">
+        <h1 className="text-2xl font-bold text-sky-500">
           Hampi Travel
         </h1>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 font-medium">
-          <li className="cursor-pointer hover:text-blue-600">Home</li>
-          <li className="cursor-pointer hover:text-blue-600">Upcoming</li>
-          <li className="cursor-pointer hover:text-blue-600">Categories</li>
-          <li className="cursor-pointer hover:text-blue-600">Contact Us</li>
+          <li className="cursor-pointer hover:text-sky-500">Home</li>
+          <li className="cursor-pointer hover:text-sky-500">Upcoming</li>
+          <li className="cursor-pointer hover:text-sky-500">Categories</li>
+          <li className="cursor-pointer hover:text-sky-500">Contact Us</li>
         </ul>
 
         {/* Desktop Login */}
-        <button className="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700">
+        <button className="hidden md:block bg-sky-500 text-white px-5 py-2 rounded-3xl hover:bg-sky-600">
           Log In
         </button>
 
@@ -36,11 +36,11 @@ function Navbar() {
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden bg-white px-6 pb-4 space-y-4 font-medium">
-          <div className="hover:text-blue-600">Home</div>
-          <div className="hover:text-blue-600">Upcoming</div>
-          <div className="hover:text-blue-600">Categories</div>
-          <div className="hover:text-blue-600">Contact Us</div>
-          <button className="w-full bg-blue-600 text-white py-2 rounded-md">
+          <div className="hover:text-sky-500">Home</div>
+          <div className="hover:text-sky-500">Upcoming</div>
+          <div className="hover:text-sky-500">Categories</div>
+          <div className="hover:text-sky-500">Contact Us</div>
+          <button className="w-full bg-sky-500 text-white py-2 rounded-3xl">
             Log In
           </button>
         </div>

@@ -13,7 +13,7 @@ function Hero() {
       .getElementById("Packages")
       ?.scrollIntoView({ behavior: "smooth" })
   }
-  className="bg-white text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-200 transform -translate-y-20"
+  className="bg-white text-sky-500 px-6 py-3 rounded-3xl font-semibold hover:bg-gray-200 transform -translate-y-20"
 >
   Book Now
 </button>
